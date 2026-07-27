@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "PowerShell($n = \\(Get-Command node -ErrorAction SilentlyContinue\\); $m = \\(Get-Command npm -ErrorAction SilentlyContinue\\); \"node: $\\($n.Source\\)\"; \"npm: $\\($m.Source\\)\"; if\\($n\\){ node --version }; if\\($m\\){ npm --version })"
+    ]
+  }
+}

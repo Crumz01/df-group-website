@@ -1,0 +1,48 @@
+# Pages CMS configuration (pagescms.org)
+# This describes the simple editing forms your boss sees. Editing content here
+# commits to GitHub, which triggers Netlify to rebuild and publish automatically.
+# No coding required to change Team or News.
+
+media:
+  input: public
+  output: /
+
+content:
+  - name: team
+    label: Team
+    type: file
+    path: content/team.json
+    fields:
+      - name: leadership
+        label: Leadership
+        type: object
+        list: true
+        fields:
+          - { name: mono, label: Initials (e.g. KK), type: string }
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role / title, type: string }
+          - { name: bio, label: Short bio, type: text }
+      - name: analysts
+        label: Investment team (analysts)
+        type: object
+        list: true
+        fields:
+          - { name: mono, label: Initials (e.g. P), type: string }
+          - { name: name, label: Name, type: string }
+          - { name: tag, label: Sector focus, type: string }
+
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    fields:
+      - name: entries
+        label: News entries
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date (e.g. Jul 2026), type: string }
+          - { name: cat, label: Category (e.g. Speaking), type: string }
+          - { name: title, label: Headline, type: string }
+          - { name: excerpt, label: Summary, type: text }
+          - { name: href, label: Link (URL), type: string }

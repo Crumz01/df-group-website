@@ -1,0 +1,10 @@
+# Netlify build settings — used when the site is connected to a GitHub repo.
+# On every push (including edits made through the CMS), Netlify runs the build
+# and publishes the static site from the `out` folder.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"

@@ -1,0 +1,53 @@
+{
+  "leadership": [
+    {
+      "mono": "KK",
+      "name": "Kenneth Kwong, CFA",
+      "role": "Founder & CEO",
+      "bio": "Decades of experience as a banker, investor, and entrepreneur, with senior roles across banks, securities firms, property companies, venture capital, academic associations, and family offices in Europe and Asia. MBA from INSEAD; alumnus of City University of Hong Kong, Peking University, and Warwick Business School."
+    },
+    {
+      "mono": "VW",
+      "name": "Vicky W.",
+      "role": "Director",
+      "bio": "Over 50 years in the financial industry. Co-established a Hong Kong–listed financial company and a greenfield single family office, and previously held the Chief Executive role at a listed financial company in Hong Kong."
+    },
+    {
+      "mono": "AY",
+      "name": "Andrew Yeung",
+      "role": "Manager · Marketing & Design",
+      "bio": "Trained as an architect and design-school graduate, Andrew leads marketing and design across the group. He also owns galleries and camera shops in Asia."
+    },
+    {
+      "mono": "A",
+      "name": "Angel",
+      "role": "Manager · Operations",
+      "bio": "Keeps the team operating efficiently and effectively across regions, coordinating the moving parts behind every mandate."
+    },
+    {
+      "mono": "AK",
+      "name": "Dr. Albert K.",
+      "role": "Head of Research",
+      "bio": "Leads the group’s research and investment strategy, translating original analysis into the theses behind our decisions."
+    },
+    {
+      "mono": "W",
+      "name": "William",
+      "role": "Manager · Risk & Compliance",
+      "bio": "Ensures the group operates to a high compliance standard, managing risk across the firm’s activities."
+    },
+    {
+      "mono": "AN",
+      "name": "Adam N.",
+      "role": "Manager · Investor Relations",
+      "bio": "Manages relationships with investors and partners, ensuring the success of our clients from first contact onward."
+    }
+  ],
+  "analysts": [
+    { "mono": "P", "name": "Poon", "tag": "Medical Technology" },
+    { "mono": "L", "name": "Luna", "tag": "Engineering & Robotics" },
+    { "mono": "S", "name": "Saruni S.", "tag": "Software · Blockchain · FinTech" },
+    { "mono": "N", "name": "Non", "tag": "Agriculture · BioFuel · New Materials" },
+    { "mono": "CC", "name": "Chin Chin", "tag": "AI & Semiconductors" }
+  ]
+}
