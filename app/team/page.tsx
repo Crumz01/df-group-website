@@ -10,8 +10,35 @@ export const metadata: Metadata = {
 };
 
 // Content lives in content/team.json — editable in the CMS with no code.
-const LEADERSHIP = team.leadership;
-const ANALYSTS = team.analysts;
+// `photo` is optional: upload one in the CMS and it replaces the initials.
+type Person = {
+  mono?: string;
+  name: string;
+  role?: string;
+  bio?: string;
+  tag?: string;
+  photo?: string;
+};
+
+const LEADERSHIP: Person[] = team.leadership;
+const ANALYSTS: Person[] = team.analysts;
+
+/** Square portrait: shows the uploaded photo, or falls back to initials. */
+function Portrait({ person }: { person: Person }) {
+  if (person.photo) {
+    return (
+      <div className="person__ph">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={person.photo} alt={person.name} />
+      </div>
+    );
+  }
+  return (
+    <div className="person__ph" aria-hidden="true">
+      {person.mono}
+    </div>
+  );
+}
 
 export default function TeamPage() {
   return (
@@ -44,11 +71,7 @@ export default function TeamPage() {
           <Reveal className="people" stagger>
             {LEADERSHIP.map((p) => (
               <RevealItem className="person" as="article" key={p.name}>
-                {/* Drop a photo in later: replace the initials with
-                    <img src="/team/kenneth.jpg" alt={p.name} /> */}
-                <div className="person__ph" aria-hidden="true">
-                  {p.mono}
-                </div>
+                <Portrait person={p} />
                 <div className="person__name">{p.name}</div>
                 <div className="person__role">{p.role}</div>
                 <p className="person__bio">{p.bio}</p>
@@ -77,9 +100,7 @@ export default function TeamPage() {
           <Reveal className="people" stagger>
             {ANALYSTS.map((p) => (
               <RevealItem className="person" as="article" key={p.name}>
-                <div className="person__ph" aria-hidden="true">
-                  {p.mono}
-                </div>
+                <Portrait person={p} />
                 <div className="person__name">{p.name}</div>
                 <div className="person__role">Analyst</div>
                 <span className="person__tag">{p.tag}</span>

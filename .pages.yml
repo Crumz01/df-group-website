@@ -4,8 +4,9 @@
 # No coding required to change Team or News.
 
 media:
-  input: public
-  output: /
+  input: public/team
+  output: /team
+  extensions: [jpg, jpeg, png, webp]
 
 content:
   - name: team
@@ -18,7 +19,10 @@ content:
         type: object
         list: true
         fields:
-          - { name: mono, label: Initials (e.g. KK), type: string }
+          - name: photo
+            label: Photo (optional — leave empty to show initials)
+            type: image
+          - { name: mono, label: Initials (used if no photo), type: string }
           - { name: name, label: Name, type: string }
           - { name: role, label: Role / title, type: string }
           - { name: bio, label: Short bio, type: text }
@@ -27,7 +31,10 @@ content:
         type: object
         list: true
         fields:
-          - { name: mono, label: Initials (e.g. P), type: string }
+          - name: photo
+            label: Photo (optional — leave empty to show initials)
+            type: image
+          - { name: mono, label: Initials (used if no photo), type: string }
           - { name: name, label: Name, type: string }
           - { name: tag, label: Sector focus, type: string }
 
