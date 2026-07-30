@@ -1,7 +1,7 @@
 {
   "leadership": [
     {
-      "mono": "KK",
+      "mono": "K",
       "name": "Kenneth Kwong, CFA",
       "role": "Founder & CEO",
       "bio": "Decades of experience as a banker, investor, and entrepreneur, with senior roles across banks, securities firms, property companies, venture capital, academic associations, and family offices in Europe and Asia. MBA from INSEAD; alumnus of City University of Hong Kong, Peking University, and Warwick Business School."
@@ -44,10 +44,30 @@
     }
   ],
   "analysts": [
-    { "mono": "P", "name": "Poon", "tag": "Medical Technology" },
-    { "mono": "L", "name": "Luna", "tag": "Engineering & Robotics" },
-    { "mono": "S", "name": "Saruni S.", "tag": "Software · Blockchain · FinTech" },
-    { "mono": "N", "name": "Non", "tag": "Agriculture · BioFuel · New Materials" },
-    { "mono": "CC", "name": "Chin Chin", "tag": "AI & Semiconductors" }
+    {
+      "mono": "P",
+      "name": "Poon",
+      "tag": "Medical Technology"
+    },
+    {
+      "mono": "L",
+      "name": "Luna",
+      "tag": "Engineering & Robotics"
+    },
+    {
+      "mono": "S",
+      "name": "Saruni S.",
+      "tag": "Software · Blockchain · FinTech"
+    },
+    {
+      "mono": "N",
+      "name": "Non",
+      "tag": "Agriculture · BioFuel · New Materials"
+    },
+    {
+      "mono": "CC",
+      "name": "Chin Chin",
+      "tag": "AI & Semiconductors"
+    }
   ]
 }
