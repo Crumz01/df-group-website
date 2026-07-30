@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import logo from "@/public/logo.png";
 
+// "Contact" is intentionally not listed here — the "Get in touch" CTA button
+// beside these links already goes to /contact, and it is still in the footer.
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
   { href: "/news", label: "News" },
   { href: "/reports", label: "Reports" },
-  { href: "/contact", label: "Contact" },
 ];
 
 function normalize(path: string) {
@@ -100,6 +101,7 @@ export default function Header() {
             <Link
               className="nav__cta"
               href="/contact"
+              aria-current={isActive("/contact") ? "page" : undefined}
               onClick={() => setOpen(false)}
             >
               Get in touch
