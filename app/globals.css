@@ -197,7 +197,12 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 400; margin: 0; }
   .nav__scrim.open { opacity: 1; pointer-events: auto; }
   .nav__close { position: absolute; top: 22px; right: 24px; background: none; border: 0; color: var(--ivory); font-size: 26px; cursor: pointer; line-height: 1; }
 }
-@media (min-width: 861px) { .nav__close { display: none; } }
+@media (min-width: 861px) {
+  .nav__close { display: none; }
+  /* Keep the links and the CTA on one line, aligned to the right of the bar.
+     Without this .nav__wrap is a block, so the CTA drops below the links. */
+  .nav__wrap { display: flex; align-items: center; gap: 30px; }
+}
 
 /* ============================================================
    HERO
