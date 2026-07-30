@@ -3,7 +3,6 @@ import { Newsreader, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -51,7 +50,6 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <CookieBanner />
       </body>
     </html>
   );
