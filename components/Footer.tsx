@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/logo.png";
+import site from "@/content/site.json";
 
 export default function Footer() {
   return (
@@ -18,10 +19,7 @@ export default function Footer() {
               />
               <span className="brand__mark">DF Group</span>
             </Link>
-            <p className="footer__blurb">
-              Corporate advisory and investment, Hong Kong. Diligent in
-              research, faithful to the companies we back.
-            </p>
+            <p className="footer__blurb">{site.footerBlurb}</p>
           </div>
           <div className="footer__col">
             <h4>Explore</h4>
@@ -67,8 +65,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <span>© 2026 DF Group · Diligent Faith. All rights reserved.</span>
-          <span>Hong Kong SAR</span>
+          <span>{site.footerCopyright}</span>
+          <span>{site.footerLocation}</span>
         </div>
       </div>
     </footer>

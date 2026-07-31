@@ -10,8 +10,14 @@ Everything below is done in a **web browser**. Nothing needs to be installed.
 2. Click **Sign in with GitHub** and log in
 3. Open the **df-group-website** repository
 4. In the left sidebar choose what to change:
+   - **Home page** — the headline, intro, the six practices, the figures,
+     the affiliations list, and the closing call to action
    - **Team** — add/remove people, change roles, bios, photos
    - **News** — add/remove news items
+   - **Contact page** — heading, email/office/LinkedIn details, the enquiry
+     types in the dropdown
+   - **Other pages & footer** — wording on the Team, News and Reports pages,
+     and the footer text
 5. Make your changes in the boxes
 6. Click the green **Save** button (top right)
 7. Wait about **1–2 minutes**, then refresh the website — the change is live
@@ -26,6 +32,11 @@ Leave the photo empty and the card shows their initials instead.
 ### Adding a new team member
 In **Team**, scroll to the section you want, click **+ Add an item**, fill in
 the fields, then **Save**.
+
+### Italic highlighted words
+In the big headline fields, put [square brackets] around the words you want
+shown in italic brass, for example:
+`We build and back companies for the [long view].`
 
 ---
 
@@ -120,10 +131,12 @@ Website Builder subscription active until the new site is confirmed working.
 
 ## Part 7 — What needs a developer
 
-Editable without a developer: **team members, photos, news items.**
+Editable without a developer: **all the wording on every page**, team members
+and photos, news items, contact details, the practices list, the affiliations
+list, and the footer.
 
-Needs a web developer: new page types, layout or design changes, and the
-wording on the Home/Contact pages (currently set in the code).
+Needs a web developer: new page types, new sections, layout or design changes,
+colours and fonts, and the partner logo strip images.
 
 The project is a standard **Next.js** site — any web developer can work on it.
 Technical setup notes are in `README.md`.

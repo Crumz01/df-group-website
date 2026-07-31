@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Contact",
+  "heading": "Let’s start a conversation.",
+  "lede": "Whether you’re raising capital, exploring a transaction, or want to join the network — we’d like to hear from you.",
+  "details": [
+    {
+      "label": "Email",
+      "value": "admin@diligentfaith.com",
+      "link": "mailto:admin@diligentfaith.com"
+    },
+    { "label": "Office", "value": "Hong Kong SAR", "link": "" },
+    {
+      "label": "LinkedIn",
+      "value": "DF Group · Diligent Faith",
+      "link": "https://www.linkedin.com/company/df-group-diligentfaith/"
+    },
+    {
+      "label": "Website",
+      "value": "diligentfaith.com",
+      "link": "https://diligentfaith.com"
+    }
+  ],
+  "formNote": "We usually reply within a couple of working days. Prefer email? Write to admin@diligentfaith.com.",
+  "topics": [
+    { "label": "Raising capital / investment" },
+    { "label": "A potential transaction (M&A)" },
+    { "label": "Advisory & strategy" },
+    { "label": "Joining the advisor network" },
+    { "label": "Media, events, or press" },
+    { "label": "Something else" }
+  ]
+}

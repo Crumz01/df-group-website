@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal, { RevealItem } from "@/components/Reveal";
 import team from "@/content/team.json";
+import site from "@/content/site.json";
 
 export const metadata: Metadata = {
   title: "Team — DF Group",
@@ -41,19 +42,15 @@ function Portrait({ person }: { person: Person }) {
 }
 
 export default function TeamPage() {
+  const t = site.teamPage;
   return (
     <>
       <section className="pagehead">
         <div className="pagehead__wash" aria-hidden="true" />
         <div className="pagehead__inner">
-          <p className="eyebrow eyebrow--onink">The people behind the work</p>
-          <h1 className="display">
-            A network of judgement, not just headcount.
-          </h1>
-          <p className="lede">
-            Leadership with decades across banking, investment, and industry —
-            supported by analysts covering the sectors we invest in.
-          </p>
+          <p className="eyebrow eyebrow--onink">{t.eyebrow}</p>
+          <h1 className="display">{t.heading}</h1>
+          <p className="lede">{t.lede}</p>
           <div className="pagehead__rule" />
         </div>
       </section>
@@ -62,9 +59,9 @@ export default function TeamPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <div>
-              <p className="eyebrow eyebrow--dim">01 — Leadership</p>
+              <p className="eyebrow eyebrow--dim">{t.leadershipEyebrow}</p>
               <h2 className="h2" style={{ marginTop: 14 }}>
-                Direction &amp; oversight
+                {t.leadershipHeading}
               </h2>
             </div>
           </Reveal>
@@ -85,16 +82,13 @@ export default function TeamPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <div>
-              <p className="eyebrow eyebrow--dim">02 — Investment team</p>
+              <p className="eyebrow eyebrow--dim">{t.analystsEyebrow}</p>
               <h2 className="h2" style={{ marginTop: 14 }}>
-                Sector coverage
+                {t.analystsHeading}
               </h2>
             </div>
             <div className="sec-head__aside">
-              <p className="lede">
-                Analysts with focused expertise across the industries where we
-                source, diligence, and back companies.
-              </p>
+              <p className="lede">{t.analystsLede}</p>
             </div>
           </Reveal>
           <Reveal className="people" stagger>
@@ -113,22 +107,18 @@ export default function TeamPage() {
       <section className="section section--ink">
         <Reveal className="wrap two-col">
           <div>
-            <p className="eyebrow eyebrow--onink">Work with us</p>
+            <p className="eyebrow eyebrow--onink">{t.ctaEyebrow}</p>
             <h2
               className="h2"
               style={{ marginTop: 16, color: "var(--ivory)", maxWidth: "16ch" }}
             >
-              Building something worth backing?
+              {t.ctaHeading}
             </h2>
           </div>
           <div className="prose" style={{ alignSelf: "center" }}>
-            <p>
-              We’re always in conversation with founders, operators, and
-              co-investors. If your work sits in one of our sectors — or
-              somewhere we should be looking — we’d like to hear from you.
-            </p>
+            <p>{t.ctaText}</p>
             <Link className="txtlink" href="/contact" style={{ marginTop: 8 }}>
-              Get in touch <span>→</span>
+              {t.ctaLabel} <span>→</span>
             </Link>
           </div>
         </Reveal>

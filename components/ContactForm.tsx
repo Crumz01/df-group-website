@@ -2,15 +2,6 @@
 
 import { useState } from "react";
 
-const TOPICS = [
-  "Raising capital / investment",
-  "A potential transaction (M&A)",
-  "Advisory & strategy",
-  "Joining the advisor network",
-  "Media, events, or press",
-  "Something else",
-];
-
 const FORM_NAME = "contact";
 
 function encode(data: Record<string, string>) {
@@ -26,10 +17,16 @@ function encode(data: Record<string, string>) {
  * Netlify dashboard and emailed on, with no mail app needed on the visitor's
  * machine.
  */
-export default function ContactForm() {
+export default function ContactForm({
+  topics,
+  note,
+}: {
+  topics: string[];
+  note: string;
+}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [topic, setTopic] = useState(TOPICS[0]);
+  const [topic, setTopic] = useState(topics[0] ?? "");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
@@ -125,7 +122,7 @@ export default function ContactForm() {
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         >
-          {TOPICS.map((t) => (
+          {topics.map((t) => (
             <option key={t}>{t}</option>
           ))}
         </select>
@@ -160,10 +157,7 @@ export default function ContactForm() {
         </p>
       )}
 
-      <p className="form__note">
-        We usually reply within a couple of working days. Prefer email? Write to{" "}
-        <a href="mailto:admin@diligentfaith.com">admin@diligentfaith.com</a>.
-      </p>
+      <p className="form__note">{note}</p>
     </form>
   );
 }

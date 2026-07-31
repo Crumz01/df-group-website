@@ -1,7 +1,9 @@
 # Pages CMS configuration (pagescms.org)
-# This describes the simple editing forms your boss sees. Editing content here
-# commits to GitHub, which triggers Netlify to rebuild and publish automatically.
-# No coding required to change Team or News.
+# These describe the editing forms. Saving here commits to GitHub, which makes
+# Netlify rebuild and publish automatically. No coding required.
+#
+# Tip for editors: in headline fields, put [square brackets] around the words
+# you want shown in italic brass, e.g. "companies for the [long view]."
 
 media:
   input: public/team
@@ -9,6 +11,105 @@ media:
   extensions: [jpg, jpeg, png, webp]
 
 content:
+  # ------------------------------------------------------------------ HOME
+  - name: home
+    label: Home page
+    type: file
+    path: content/home.json
+    fields:
+      - name: hero
+        label: Hero (top of the page)
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the headline, type: string }
+          - name: heading
+            label: Headline — use [brackets] for the italic words
+            type: text
+          - { name: lede, label: Intro paragraph, type: text }
+          - { name: primaryLabel, label: Main button text, type: string }
+          - { name: secondaryLabel, label: Secondary link text, type: string }
+
+      - name: stats
+        label: Three figures under the hero
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: Figure (a number like 100+ will count up)
+            type: string
+          - { name: label, label: Caption, type: string }
+
+      - name: trustedByEyebrow
+        label: Heading above the partner logo strip
+        type: string
+
+      - name: intro
+        label: "Section: Who we are"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - name: statement
+            label: Large statement — use [brackets] for italic words
+            type: text
+          - name: paragraphs
+            label: Paragraphs
+            type: string
+            list: true
+
+      - name: practices
+        label: "Section: What we do"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Section heading, type: string }
+          - { name: lede, label: Section intro, type: text }
+          - name: items
+            label: Practices
+            type: object
+            list: true
+            fields:
+              - { name: no, label: "Number (e.g. 01)", type: string }
+              - { name: title, label: Title, type: string }
+              - { name: desc, label: Description, type: text }
+
+      - name: approach
+        label: "Section: Our approach"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - name: statement
+            label: Large statement — use [brackets] for italic words
+            type: text
+          - name: paragraphs
+            label: Paragraphs
+            type: string
+            list: true
+          - { name: linkLabel, label: Link text, type: string }
+
+      - name: affiliations
+        label: "Section: Networks & affiliations"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Section heading, type: string }
+          - { name: lede, label: Section intro, type: text }
+          - name: items
+            label: Organisations
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+
+      - name: cta
+        label: "Section: Closing call to action"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: buttonLabel, label: Button text, type: string }
+
+  # ------------------------------------------------------------------ TEAM
   - name: team
     label: Team
     type: file
@@ -38,6 +139,7 @@ content:
           - { name: name, label: Name, type: string }
           - { name: tag, label: Sector focus, type: string }
 
+  # ------------------------------------------------------------------ NEWS
   - name: news
     label: News
     type: file
@@ -53,3 +155,80 @@ content:
           - { name: title, label: Headline, type: string }
           - { name: excerpt, label: Summary, type: text }
           - { name: href, label: Link (URL), type: string }
+
+  # --------------------------------------------------------------- CONTACT
+  - name: contact
+    label: Contact page
+    type: file
+    path: content/contact.json
+    fields:
+      - { name: eyebrow, label: Small heading, type: string }
+      - { name: heading, label: Page heading, type: string }
+      - { name: lede, label: Intro paragraph, type: text }
+      - name: details
+        label: Contact details
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Label (e.g. Email)", type: string }
+          - { name: value, label: Text shown, type: string }
+          - name: link
+            label: Link (optional — mailto:… or https://…)
+            type: string
+      - { name: formNote, label: Note under the form, type: text }
+      - name: topics
+        label: Enquiry types in the dropdown
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Option, type: string }
+
+  # ------------------------------------------- OTHER PAGES / SITE-WIDE BITS
+  - name: site
+    label: Other pages & footer
+    type: file
+    path: content/site.json
+    fields:
+      - { name: footerBlurb, label: Footer description, type: text }
+      - { name: footerCopyright, label: Footer copyright line, type: string }
+      - { name: footerLocation, label: Footer location, type: string }
+
+      - name: teamPage
+        label: Team page wording
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Page heading, type: string }
+          - { name: lede, label: Intro paragraph, type: text }
+          - { name: leadershipEyebrow, label: Leadership — small heading, type: string }
+          - { name: leadershipHeading, label: Leadership — heading, type: string }
+          - { name: analystsEyebrow, label: Analysts — small heading, type: string }
+          - { name: analystsHeading, label: Analysts — heading, type: string }
+          - { name: analystsLede, label: Analysts — intro, type: text }
+          - { name: ctaEyebrow, label: Closing — small heading, type: string }
+          - { name: ctaHeading, label: Closing — heading, type: string }
+          - { name: ctaText, label: Closing — text, type: text }
+          - { name: ctaLabel, label: Closing — link text, type: string }
+
+      - name: newsPage
+        label: News page wording
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Page heading, type: string }
+          - { name: lede, label: Intro paragraph, type: text }
+          - { name: buttonLabel, label: Button text, type: string }
+          - { name: buttonLink, label: Button link, type: string }
+
+      - name: reportsPage
+        label: Reports page wording
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: heading, label: Page heading, type: string }
+          - { name: lede, label: Intro paragraph, type: text }
+          - { name: bodyEyebrow, label: Body — small heading, type: string }
+          - { name: bodyStatement, label: Body — large statement, type: string }
+          - { name: bodyText, label: Body — text, type: text }
+          - { name: buttonLabel, label: Button text, type: string }
+          - { name: buttonLink, label: Button link, type: string }

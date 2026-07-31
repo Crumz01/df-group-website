@@ -9,6 +9,15 @@ import {
 } from "framer-motion";
 import Counter from "./Counter";
 import MagneticButton from "./MagneticButton";
+import { withEmphasis } from "@/lib/emphasis";
+import home from "@/content/home.json";
+
+/** "100+" -> counts up to 100 then shows "+". Non-numeric values render as-is. */
+function StatValue({ value }: { value: string }) {
+  const m = value.match(/^(\d+)(\D*)$/);
+  if (!m) return <>{value}</>;
+  return <Counter value={parseInt(m[1], 10)} suffix={m[2]} />;
+}
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -16,6 +25,8 @@ export default function Hero() {
   // Subtle parallax drift on the atmospheric brass wash + skyline.
   const washY = useTransform(scrollY, [0, 600], [0, 120]);
   const skyY = useTransform(scrollY, [0, 600], [0, 70]);
+
+  const { hero, stats } = home;
 
   const rise = (delay: number) =>
     reduce
@@ -45,25 +56,23 @@ export default function Hero() {
           className="eyebrow eyebrow--onink hero__eyebrow"
           {...rise(0.05)}
         >
-          Hong Kong · Corporate Advisory &amp; Investment
+          {hero.eyebrow}
         </motion.p>
 
         <motion.h1 className="display" {...rise(0.15)}>
-          We build and back companies for the <em>long view</em>.
+          {withEmphasis(hero.heading)}
         </motion.h1>
 
         <motion.p className="lede lede--onink hero__lede" {...rise(0.28)}>
-          DF Group partners with founders, corporates, and investors across Asia
-          and beyond — pairing a global advisory network with patient capital
-          and hands-on execution.
+          {hero.lede}
         </motion.p>
 
         <motion.div className="hero__actions" {...rise(0.4)}>
           <MagneticButton href="#practice" className="btn btn--solid">
-            Our areas of work <span className="btn__arrow">→</span>
+            {hero.primaryLabel} <span className="btn__arrow">→</span>
           </MagneticButton>
           <Link className="txtlink" href="/contact">
-            Start a conversation
+            {hero.secondaryLabel}
           </Link>
         </motion.div>
 
@@ -83,20 +92,14 @@ export default function Hero() {
         </div>
 
         <motion.div className="hero__stats" {...rise(0.5)}>
-          <div className="stat">
-            <div className="stat__k">
-              <Counter value={100} suffix="+" />
+          {stats.map((s) => (
+            <div className="stat" key={s.label}>
+              <div className="stat__k">
+                <StatValue value={s.value} />
+              </div>
+              <div className="stat__l">{s.label}</div>
             </div>
-            <div className="stat__l">Advisors in our network</div>
-          </div>
-          <div className="stat">
-            <div className="stat__k">Asia&ndash;Global</div>
-            <div className="stat__l">Cross-border reach</div>
-          </div>
-          <div className="stat">
-            <div className="stat__k">Patient</div>
-            <div className="stat__l">Capital &amp; conviction</div>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>

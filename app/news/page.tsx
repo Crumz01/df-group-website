@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Reveal, { RevealItem } from "@/components/Reveal";
 import news from "@/content/news.json";
+import site from "@/content/site.json";
 
 export const metadata: Metadata = {
   title: "News — DF Group",
@@ -12,19 +13,15 @@ export const metadata: Metadata = {
 const ENTRIES = news.entries;
 
 export default function NewsPage() {
+  const n = site.newsPage;
   return (
     <>
       <section className="pagehead">
         <div className="pagehead__wash" aria-hidden="true" />
         <div className="pagehead__inner">
-          <p className="eyebrow eyebrow--onink">Company news</p>
-          <h1 className="display">
-            What we’re building, backing, and convening.
-          </h1>
-          <p className="lede">
-            Announcements, appointments, and moments from across the DF Group
-            network.
-          </p>
+          <p className="eyebrow eyebrow--onink">{n.eyebrow}</p>
+          <h1 className="display">{n.heading}</h1>
+          <p className="lede">{n.lede}</p>
           <div className="pagehead__rule" />
         </div>
       </section>
@@ -56,11 +53,11 @@ export default function NewsPage() {
           <div style={{ marginTop: 44 }}>
             <a
               className="btn btn--dark"
-              href="https://www.linkedin.com/company/df-group-diligentfaith/"
+              href={n.buttonLink}
               target="_blank"
               rel="noopener"
             >
-              Follow DF Group on LinkedIn <span className="btn__arrow">→</span>
+              {n.buttonLabel} <span className="btn__arrow">→</span>
             </a>
           </div>
         </div>

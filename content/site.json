@@ -1,0 +1,36 @@
+{
+  "footerBlurb": "Corporate advisory and investment, Hong Kong. Diligent in research, faithful to the companies we back.",
+  "footerCopyright": "© 2026 DF Group · Diligent Faith. All rights reserved.",
+  "footerLocation": "Hong Kong SAR",
+  "teamPage": {
+    "eyebrow": "The people behind the work",
+    "heading": "A network of judgement, not just headcount.",
+    "lede": "Leadership with decades across banking, investment, and industry — supported by analysts covering the sectors we invest in.",
+    "leadershipEyebrow": "01 — Leadership",
+    "leadershipHeading": "Direction & oversight",
+    "analystsEyebrow": "02 — Investment team",
+    "analystsHeading": "Sector coverage",
+    "analystsLede": "Analysts with focused expertise across the industries where we source, diligence, and back companies.",
+    "ctaEyebrow": "Work with us",
+    "ctaHeading": "Building something worth backing?",
+    "ctaText": "We’re always in conversation with founders, operators, and co-investors. If your work sits in one of our sectors — or somewhere we should be looking — we’d like to hear from you.",
+    "ctaLabel": "Get in touch"
+  },
+  "newsPage": {
+    "eyebrow": "Company news",
+    "heading": "What we’re building, backing, and convening.",
+    "lede": "Announcements, appointments, and moments from across the DF Group network.",
+    "buttonLabel": "Follow DF Group on LinkedIn",
+    "buttonLink": "https://www.linkedin.com/company/df-group-diligentfaith/"
+  },
+  "reportsPage": {
+    "eyebrow": "Reports & Articles",
+    "heading": "Original research, plainly written.",
+    "lede": "Sector notes, deal perspectives, and market views from our research desk — the thinking behind how we invest.",
+    "bodyEyebrow": "Reports & Articles",
+    "bodyStatement": "Research, coming soon.",
+    "bodyText": "We’re preparing a home for our published reports and articles. In the meantime, our latest thinking is shared on LinkedIn.",
+    "buttonLabel": "See more on LinkedIn",
+    "buttonLink": "https://www.linkedin.com/company/df-group-diligentfaith/"
+  }
+}

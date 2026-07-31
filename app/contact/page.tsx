@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import contact from "@/content/contact.json";
 
 export const metadata: Metadata = {
   title: "Contact — DF Group",
@@ -14,12 +15,9 @@ export default function ContactPage() {
       <section className="pagehead">
         <div className="pagehead__wash" aria-hidden="true" />
         <div className="pagehead__inner">
-          <p className="eyebrow eyebrow--onink">Contact</p>
-          <h1 className="display">Let’s start a conversation.</h1>
-          <p className="lede">
-            Whether you’re raising capital, exploring a transaction, or want to
-            join the network — we’d like to hear from you.
-          </p>
+          <p className="eyebrow eyebrow--onink">{contact.eyebrow}</p>
+          <h1 className="display">{contact.heading}</h1>
+          <p className="lede">{contact.lede}</p>
           <div className="pagehead__rule" />
         </div>
       </section>
@@ -27,46 +25,32 @@ export default function ContactPage() {
       <section className="section section--paper">
         <div className="wrap contact-grid">
           <Reveal className="contact-block">
-            <div className="contact-item">
-              <div className="k">Email</div>
-              <div className="v">
-                <a href="mailto:admin@diligentfaith.com">
-                  admin@diligentfaith.com
-                </a>
+            {contact.details.map((d) => (
+              <div className="contact-item" key={d.label}>
+                <div className="k">{d.label}</div>
+                <div className="v">
+                  {d.link ? (
+                    <a
+                      href={d.link}
+                      {...(d.link.startsWith("http")
+                        ? { target: "_blank", rel: "noopener" }
+                        : {})}
+                    >
+                      {d.value}
+                    </a>
+                  ) : (
+                    d.value
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="contact-item">
-              <div className="k">Office</div>
-              <div className="v">Hong Kong SAR</div>
-            </div>
-            <div className="contact-item">
-              <div className="k">LinkedIn</div>
-              <div className="v">
-                <a
-                  href="https://www.linkedin.com/company/df-group-diligentfaith/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  DF Group · Diligent Faith
-                </a>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="k">Website</div>
-              <div className="v">
-                <a
-                  href="https://diligentfaith.com"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  diligentfaith.com
-                </a>
-              </div>
-            </div>
+            ))}
           </Reveal>
 
           <Reveal>
-            <ContactForm />
+            <ContactForm
+              topics={contact.topics.map((t) => t.label)}
+              note={contact.formNote}
+            />
           </Reveal>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
+import site from "@/content/site.json";
 
 export const metadata: Metadata = {
   title: "Reports & Articles — DF Group",
@@ -8,17 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function ReportsPage() {
+  const r = site.reportsPage;
   return (
     <>
       <section className="pagehead">
         <div className="pagehead__wash" aria-hidden="true" />
         <div className="pagehead__inner">
-          <p className="eyebrow eyebrow--onink">Reports &amp; Articles</p>
-          <h1 className="display">Original research, plainly written.</h1>
-          <p className="lede">
-            Sector notes, deal perspectives, and market views from our research
-            desk — the thinking behind how we invest.
-          </p>
+          <p className="eyebrow eyebrow--onink">{r.eyebrow}</p>
+          <h1 className="display">{r.heading}</h1>
+          <p className="lede">{r.lede}</p>
           <div className="pagehead__rule" />
         </div>
       </section>
@@ -26,7 +25,7 @@ export default function ReportsPage() {
       <section className="section section--paper">
         <Reveal className="wrap">
           <div style={{ textAlign: "center", maxWidth: 660, margin: "0 auto" }}>
-            <p className="eyebrow eyebrow--dim">Reports &amp; Articles</p>
+            <p className="eyebrow eyebrow--dim">{r.bodyEyebrow}</p>
             <p
               className="statement"
               style={{
@@ -35,23 +34,22 @@ export default function ReportsPage() {
                 maxWidth: "24ch",
               }}
             >
-              Research, coming soon.
+              {r.bodyStatement}
             </p>
             <p
               className="lede"
               style={{ margin: "22px auto 0", textAlign: "center" }}
             >
-              We’re preparing a home for our published reports and articles. In
-              the meantime, our latest thinking is shared on LinkedIn.
+              {r.bodyText}
             </p>
             <div style={{ marginTop: 34 }}>
               <a
                 className="btn btn--dark"
-                href="https://www.linkedin.com/company/df-group-diligentfaith/"
+                href={r.buttonLink}
                 target="_blank"
                 rel="noopener"
               >
-                See more on LinkedIn <span className="btn__arrow">→</span>
+                {r.buttonLabel} <span className="btn__arrow">→</span>
               </a>
             </div>
           </div>
