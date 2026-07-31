@@ -39,7 +39,8 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch(window.location.pathname, {
+      // Netlify accepts AJAX form posts at the site root.
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
