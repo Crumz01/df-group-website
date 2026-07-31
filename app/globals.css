@@ -479,6 +479,14 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 400; margin: 0; }
 .field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--brass); }
 .field textarea { resize: vertical; min-height: 128px; }
 .form__note { font-size: 13px; color: var(--stone); }
+.form__note--error { color: var(--brass-deep); }
+.form button[disabled] { opacity: .6; cursor: default; }
+
+/* confirmation shown after a successful enquiry */
+.form-sent {
+  border: 1px solid var(--line); border-radius: 3px;
+  background: var(--paper-card); padding: clamp(28px, 4vw, 40px);
+}
 
 /* ============================================================
    FOOTER
