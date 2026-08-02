@@ -6,9 +6,9 @@
 # you want shown in italic brass, e.g. "companies for the [long view]."
 
 media:
-  input: public/team
-  output: /team
-  extensions: [jpg, jpeg, png, webp]
+  input: public
+  output: /
+  extensions: [jpg, jpeg, png, webp, svg]
 
 content:
   # ------------------------------------------------------------------ HOME
@@ -108,6 +108,22 @@ content:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text }
           - { name: buttonLabel, label: Button text, type: string }
+
+  # -------------------------------------------------------------- PARTNERS
+  - name: partners
+    label: Partner logos (moving strip)
+    type: file
+    path: content/partners.json
+    fields:
+      - name: logos
+        label: Logos
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Organisation name, type: string }
+          - name: image
+            label: Logo image
+            type: image
 
   # ------------------------------------------------------------------ TEAM
   - name: team

@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "Hong Kong · Corporate Advisory & Investment",
+    "eyebrow": "Hong Kong",
     "heading": "We build and back companies for the [long view].",
     "lede": "DF Group partners with founders, corporates, and investors across Asia and beyond — pairing a global advisory network with patient capital and hands-on execution.",
     "primaryLabel": "Our areas of work",
@@ -16,13 +16,13 @@
     "eyebrow": "Who we are",
     "statement": "Diligent in our research. [Faithful] to the companies we back.",
     "paragraphs": [
-      "DF Group is a Hong Kong–based corporate advisory and investment house. We work at the intersection of strategy and capital — advising boards, structuring transactions, and investing alongside founders we believe in.",
-      "Our strength is our people: a multidisciplinary network of more than one hundred advisors spanning finance, technology, industry, and operations across Asia, Europe, and the Middle East. We bring that collective judgement to every mandate, and we stay for the long term."
+      "We work at the intersection of strategy and capital — advising boards, structuring transactions, and investing alongside founders we believe in.",
+      "Our strength is our people: a multidisciplinary network of hundreds of advisors spanning finance, technology, industry, and operations across the world. We bring that collective judgement to every mandate, and we stay for the long term."
     ]
   },
   "practices": {
     "eyebrow": "What we do",
-    "heading": "Six practices, one partnership",
+    "heading": "Five practices, one partnership",
     "lede": "From first strategy to exit, we operate across the full lifecycle of a business — as advisor, builder, and investor.",
     "items": [
       {
@@ -37,21 +37,16 @@
       },
       {
         "no": "03",
-        "title": "Mergers & Acquisitions",
-        "desc": "Buy-side and sell-side execution — sourcing, valuation, diligence, and negotiation through to completion."
-      },
-      {
-        "no": "04",
         "title": "Investor Relations",
         "desc": "Positioning companies with the right capital partners, and managing the relationship long after the deal closes."
       },
       {
-        "no": "05",
+        "no": "04",
         "title": "Executive Training & Networking",
         "desc": "Programmes and convenings that connect leaders across our network and sharpen how they lead."
       },
       {
-        "no": "06",
+        "no": "05",
         "title": "Event & Media Management",
         "desc": "End-to-end production of the events, panels, and media that build a company’s profile and relationships."
       }

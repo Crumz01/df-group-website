@@ -8,7 +8,11 @@
       "value": "admin@diligentfaith.com",
       "link": "mailto:admin@diligentfaith.com"
     },
-    { "label": "Office", "value": "Hong Kong SAR", "link": "" },
+    {
+      "label": "Office",
+      "value": "Hong Kong · Singapore · Dubai · Paris · London · Shenzhen",
+      "link": ""
+    },
     {
       "label": "LinkedIn",
       "value": "DF Group · Diligent Faith",
@@ -22,11 +26,23 @@
   ],
   "formNote": "We usually reply within a couple of working days. Prefer email? Write to admin@diligentfaith.com.",
   "topics": [
-    { "label": "Raising capital / investment" },
-    { "label": "A potential transaction (M&A)" },
-    { "label": "Advisory & strategy" },
-    { "label": "Joining the advisor network" },
-    { "label": "Media, events, or press" },
-    { "label": "Something else" }
+    {
+      "label": "Raising capital / investment"
+    },
+    {
+      "label": "A potential transaction (M&A)"
+    },
+    {
+      "label": "Advisory & strategy"
+    },
+    {
+      "label": "Joining the advisor network"
+    },
+    {
+      "label": "Media, events, or press"
+    },
+    {
+      "label": "Something else"
+    }
   ]
 }

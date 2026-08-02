@@ -62,7 +62,6 @@ export default function Header() {
               priority
             />
             <span className="brand__mark">DF Group</span>
-            <span className="brand__tag">Diligent&nbsp;Faith</span>
           </Link>
 
           <button

@@ -25,9 +25,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DF Group — Corporate Advisory & Investment · Hong Kong",
+  title: "DF Group · Hong Kong",
   description:
-    "DF Group (Diligent Faith) is a Hong Kong corporate advisory and investment firm — building and backing companies with a global network, multidisciplinary expertise, and patient capital.",
+    "DF Group is a Hong Kong firm building and backing companies with a global network, multidisciplinary expertise, and patient capital.",
   icons: {
     icon: "/favicon.png",
   },
