@@ -194,6 +194,18 @@ never saved. Click it.
 The photo was removed or its file is missing. Open that item in the editor,
 upload the picture again, and save.
 
+### "Resource not accessible by integration" when saving
+The editor is open on an out-of-date web address, or it has lost permission.
+
+1. Go to **https://app.pagescms.org** (the plain address, not a bookmark)
+2. Open **df-group-website** from the list
+3. Check the address bar reads `app.pagescms.org/workklk8-oss/df-group-website`
+
+If the repository is not listed, the editor needs to be re-authorised: visit
+`https://github.com/apps/pages-cms/installations/new`, choose the
+**workklk8-oss** account, select **df-group-website**, and install. The account
+owner may need to approve this.
+
 ### The website is completely down
 1. Go to Netlify -> the site -> **Deploys**
 2. If the newest deploy says **Failed**, click it to see why
