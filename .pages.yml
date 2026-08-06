@@ -86,20 +86,6 @@ content:
             list: true
           - { name: linkLabel, label: Link text, type: string }
 
-      - name: affiliations
-        label: "Section: Networks & affiliations"
-        type: object
-        fields:
-          - { name: eyebrow, label: Small heading, type: string }
-          - { name: heading, label: Section heading, type: string }
-          - { name: lede, label: Section intro, type: text }
-          - name: items
-            label: Organisations
-            type: object
-            list: true
-            fields:
-              - { name: name, label: Name, type: string }
-
       - name: cta
         label: "Section: Closing call to action"
         type: object
@@ -124,6 +110,22 @@ content:
           - name: image
             label: Logo image
             type: image
+
+  # ------------------------------------------------------------------- GALLERY
+  - name: gallery
+    label: Gallery photos
+    type: file
+    path: content/gallery.json
+    fields:
+      - name: photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - { name: caption, label: Caption (optional), type: string }
 
   # ------------------------------------------------------------------ TEAM
   - name: team
@@ -236,15 +238,10 @@ content:
           - { name: buttonLabel, label: Button text, type: string }
           - { name: buttonLink, label: Button link, type: string }
 
-      - name: reportsPage
-        label: Reports page wording
+      - name: galleryPage
+        label: Gallery page wording
         type: object
         fields:
           - { name: eyebrow, label: Small heading, type: string }
           - { name: heading, label: Page heading, type: string }
           - { name: lede, label: Intro paragraph, type: text }
-          - { name: bodyEyebrow, label: Body — small heading, type: string }
-          - { name: bodyStatement, label: Body — large statement, type: string }
-          - { name: bodyText, label: Body — text, type: text }
-          - { name: buttonLabel, label: Button text, type: string }
-          - { name: buttonLink, label: Button link, type: string }

@@ -34,7 +34,7 @@ export default function Footer() {
                 <Link href="/news">News</Link>
               </li>
               <li>
-                <Link href="/reports">Reports &amp; Articles</Link>
+                <Link href="/gallery">Gallery</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>

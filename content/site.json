@@ -1,11 +1,11 @@
 {
-  "footerBlurb": "Hong Kong. Diligent in research, faithful to the companies we back.",
+  "footerBlurb": "Diligent in head, Faithful in heart.",
   "footerCopyright": "© 2026 DF Group · Diligent Faith. All rights reserved.",
   "footerLocation": "Hong Kong SAR",
   "teamPage": {
     "eyebrow": "The people behind the work",
     "heading": "A network of judgement, not just headcount.",
-    "lede": "Leadership with decades across banking, investment, and industry — supported by analysts covering the sectors we invest in.",
+    "lede": "Leadership is with decades of banking and finance experience — supported by advisors and researchers in different sectors.",
     "leadershipEyebrow": "01 — Leadership",
     "leadershipHeading": "Direction & oversight",
     "analystsEyebrow": "02 — Investment team",
@@ -18,19 +18,14 @@
   },
   "newsPage": {
     "eyebrow": "Company news",
-    "heading": "What we’re building, backing, and convening.",
+    "heading": "Announcements & News. Perspectives & Reports.",
     "lede": "Announcements, appointments, and moments from across the DF Group network.",
     "buttonLabel": "Follow DF Group on LinkedIn",
     "buttonLink": "https://www.linkedin.com/company/df-group-diligentfaith/"
   },
-  "reportsPage": {
-    "eyebrow": "Reports & Articles",
-    "heading": "Original research, plainly written.",
-    "lede": "Sector notes, deal perspectives, and market views from our research desk — the thinking behind how we invest.",
-    "bodyEyebrow": "Reports & Articles",
-    "bodyStatement": "Research, coming soon.",
-    "bodyText": "We’re preparing a home for our published reports and articles. In the meantime, our latest thinking is shared on LinkedIn.",
-    "buttonLabel": "See more on LinkedIn",
-    "buttonLink": "https://www.linkedin.com/company/df-group-diligentfaith/"
+  "galleryPage": {
+    "eyebrow": "Gallery",
+    "heading": "Moments from the network.",
+    "lede": "Events, convenings, and milestones from across DF Group."
   }
 }

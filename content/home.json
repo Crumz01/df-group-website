@@ -7,9 +7,18 @@
     "secondaryLabel": "Start a conversation"
   },
   "stats": [
-    { "value": "100+", "label": "Advisors in our network" },
-    { "value": "Asia–Global", "label": "Cross-border reach" },
-    { "value": "Patient", "label": "Capital & conviction" }
+    {
+      "value": "100+",
+      "label": "Advisors in our network"
+    },
+    {
+      "value": "Asia–Global",
+      "label": "Cross-border reach"
+    },
+    {
+      "value": "Patient",
+      "label": "Capital & conviction"
+    }
   ],
   "trustedByEyebrow": "Trusted by founders & partners",
   "intro": {
@@ -60,25 +69,6 @@
       "That patience is only possible because of who sits around the table — operators, researchers, and specialists who have built and run companies themselves. When we commit, we commit as partners."
     ],
     "linkLabel": "Meet the team"
-  },
-  "affiliations": {
-    "eyebrow": "Networks & affiliations",
-    "heading": "The company we keep",
-    "lede": "DF Group partners with, sponsors, and takes part in leading institutions and communities across Asia and Europe.",
-    "items": [
-      { "name": "Hong Kong Academy for Wealth Legacy" },
-      { "name": "Blue Economy & Finance Forum" },
-      { "name": "Fondation Prince Albert II de Monaco" },
-      { "name": "Investors for Climate" },
-      { "name": "Sustainable Finance Initiative" },
-      { "name": "La French Tech" },
-      { "name": "INSEAD Alumni Entrepreneurship Club" },
-      { "name": "TEDxHongKong" },
-      { "name": "HKSTP" },
-      { "name": "CityU HK Tech 300" },
-      { "name": "LEAP East" },
-      { "name": "2050" }
-    ]
   },
   "cta": {
     "eyebrow": "Work with us",

@@ -12,7 +12,7 @@ const LINKS = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
   { href: "/news", label: "News" },
-  { href: "/reports", label: "Reports" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 function normalize(path: string) {

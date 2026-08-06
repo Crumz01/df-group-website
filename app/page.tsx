@@ -8,7 +8,7 @@ import { withEmphasis } from "@/lib/emphasis";
 import home from "@/content/home.json";
 
 export default function Home() {
-  const { intro, practices, approach, affiliations, cta } = home;
+  const { intro, practices, approach, cta } = home;
 
   return (
     <>
@@ -70,29 +70,6 @@ export default function Home() {
             </Link>
           </div>
         </Reveal>
-      </section>
-
-      <section className="section section--paper">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <div>
-              <p className="eyebrow eyebrow--dim">{affiliations.eyebrow}</p>
-              <h2 className="h2" style={{ marginTop: 14 }}>
-                {affiliations.heading}
-              </h2>
-            </div>
-            <div className="sec-head__aside">
-              <p className="lede">{affiliations.lede}</p>
-            </div>
-          </Reveal>
-          <Reveal className="affil">
-            {affiliations.items.map((a) => (
-              <div className="affil__item" key={a.name}>
-                {a.name}
-              </div>
-            ))}
-          </Reveal>
-        </div>
       </section>
 
       <section className="section section--ink">

@@ -4,11 +4,6 @@
   "lede": "Whether you’re raising capital, exploring a transaction, or want to join the network — we’d like to hear from you.",
   "details": [
     {
-      "label": "Email",
-      "value": "admin@diligentfaith.com",
-      "link": "mailto:admin@diligentfaith.com"
-    },
-    {
       "label": "Office",
       "value": "Hong Kong · Singapore · Dubai · Paris · London · Shenzhen",
       "link": ""
@@ -24,7 +19,7 @@
       "link": "https://diligentfaith.com"
     }
   ],
-  "formNote": "We usually reply within a couple of working days. Prefer email? Write to admin@diligentfaith.com.",
+  "formNote": "We usually reply within a couple of working days.",
   "topics": [
     {
       "label": "Raising capital / investment"
