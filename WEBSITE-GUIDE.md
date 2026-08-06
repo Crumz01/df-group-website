@@ -201,10 +201,21 @@ The editor is open on an out-of-date web address, or it has lost permission.
 2. Open **df-group-website** from the list
 3. Check the address bar reads `app.pagescms.org/workklk8-oss/df-group-website`
 
-If the repository is not listed, the editor needs to be re-authorised: visit
-`https://github.com/apps/pages-cms/installations/new`, choose the
-**workklk8-oss** account, select **df-group-website**, and install. The account
-owner may need to approve this.
+If the address is already correct, the editor app has not been given access to
+the repository. **Only the owner of the `workklk8-oss` GitHub account can fix
+this** — being a collaborator is not enough, because this is an account-level
+app installation.
+
+Ask the account owner to:
+
+1. Log in to GitHub as **workklk8-oss**
+2. Go to `https://github.com/apps/pages-cms`
+3. Click **Install** (or **Configure** if it is already installed)
+4. Choose **Only select repositories** and tick **df-group-website**
+5. Save
+
+This only needs doing once. After that, everyone with Write access to the
+repository can use the editor.
 
 ### The website is completely down
 1. Go to Netlify -> the site -> **Deploys**
