@@ -1,142 +1,79 @@
-# DF Group website — owner's guide
+# Handover record — DF Group website
 
-Everything below is done in a **web browser**. Nothing needs to be installed.
-
----
-
-## Part 1 — How to update the website (day to day)
-
-1. Go to **https://pagescms.org**
-2. Click **Sign in with GitHub** and log in
-3. Open the **df-group-website** repository
-4. In the left sidebar choose what to change:
-   - **Home page** — the headline, intro, the six practices, the figures,
-     the affiliations list, and the closing call to action
-   - **Team** — add/remove people, change roles, bios, photos
-   - **News** — add/remove news items
-   - **Contact page** — heading, email/office/LinkedIn details, the enquiry
-     types in the dropdown
-   - **Other pages & footer** — wording on the Team, News and Reports pages,
-     and the footer text
-5. Make your changes in the boxes
-6. Click the green **Save** button (top right)
-7. Wait about **1–2 minutes**, then refresh the website — the change is live
-
-That is the whole process. No code, no uploading files.
-
-### Adding a person's photo
-Open the person in **Team**, click the **Photo** field, upload a square image
-(about 600 x 600 pixels works well), then **Save**.
-Leave the photo empty and the card shows their initials instead.
-
-### Adding a new team member
-In **Team**, scroll to the section you want, click **+ Add an item**, fill in
-the fields, then **Save**.
-
-### Italic highlighted words
-In the big headline fields, put [square brackets] around the words you want
-shown in italic brass, for example:
-`We build and back companies for the [long view].`
+> **If you have been asked to update the website, read `WEBSITE-GUIDE.md`
+> instead.** That is the practical, step-by-step guide.
+>
+> This file is a record of how the site was set up and who owns what. Keep it
+> for reference; you do not need it for day-to-day editing.
 
 ---
 
-## Part 2 — Who to add as an editor
+## Status: migration complete
 
-Anyone with access to the GitHub repository can use the editor above.
+The website moved from GoDaddy Website Builder to a custom Next.js site.
 
-To add someone:
-1. Go to `https://github.com/<owner>/df-group-website/settings/access`
-2. Click **Add people**, enter their GitHub username, and confirm
-3. They can then sign in at pagescms.org and edit
-
-To remove someone, use the same screen and remove them.
-
----
-
-## Part 3 — Contact form enquiries
-
-The contact form is handled by **Netlify Forms**. Nothing is installed and no
-email app is needed by the visitor.
-
-**Where enquiries arrive:** Netlify -> your site -> **Forms** -> `contact`.
-Every submission is listed there.
-
-**To get an email for each enquiry (do this once):**
-1. Netlify -> your site -> **Forms**
-2. Open **Form notifications** -> **Add notification** -> *Email notification*
-3. Set the address to `admin@diligentfaith.com` and save
-
-The free plan covers 100 submissions a month, with spam filtering included.
+- [x] Site built and published
+- [x] Code and content owned by the company GitHub account (`workklk8-oss`)
+- [x] Hosting on Netlify (site `calm-kleicha-1c8872`), building from GitHub
+- [x] `diligentfaith.com` pointed at Netlify
+- [x] HTTPS certificate issued
+- [x] Company email (Microsoft 365) unaffected
 
 ---
 
-## Part 4 — How the site works (one paragraph)
+## Who owns what
 
-The website content is stored in the **GitHub** repository. **Netlify** watches
-that repository, and every time content changes it rebuilds the site
-automatically and publishes it. **Pages CMS** is just a friendly set of forms
-on top of GitHub. The domain name stays registered at **GoDaddy** and points
-to Netlify.
-
-```
-Edit in Pages CMS  ->  saved to GitHub  ->  Netlify rebuilds  ->  site is live
-```
-
----
-
-## Part 5 — Handover checklist (transferring ownership)
-
-Do these once, so the site belongs to DF Group and not to any individual.
-
-- [ ] Owner creates a **GitHub** account (github.com)
-- [ ] Current repo owner: repo **Settings -> Danger Zone -> Transfer ownership**
-      to the new account (or, better, to a GitHub **Organization** for DF Group)
-- [ ] Owner accepts the transfer from the email GitHub sends
-- [ ] Owner creates a **Netlify** account and chooses *Continue with GitHub*
-- [ ] In Netlify: **Add new site -> Import an existing project -> GitHub ->
-      df-group-website -> Deploy**
-- [ ] Check the new Netlify address loads the site correctly
-- [ ] Point the domain (see Part 6)
-- [ ] Delete the old Netlify site once the new one is confirmed working
-
-Note: the GitHub repository is **public**. This is required for automatic
-publishing on Netlify's free plan, and is normal for a marketing website — it
-contains no passwords or customer data, only the public site content.
+| Thing | Where it lives | Notes |
+|---|---|---|
+| Domain name | GoDaddy | Renew yearly. Keep auto-renew on. |
+| DNS records | GoDaddy | Only the `A` and `www CNAME` records relate to the website. |
+| Content and code | GitHub `workklk8-oss/df-group-website` | Public repository. Contains no passwords or customer data. |
+| Hosting | Netlify, site `calm-kleicha-1c8872` | Free plan. Rebuilds automatically on every content change. |
+| Editor | pagescms.org | Stores nothing itself; reads and writes the GitHub repository. |
+| Company email | Microsoft 365 | Completely separate from the website. |
 
 ---
 
-## Part 6 — Pointing diligentfaith.com at the site
+## DNS records that point the domain at the website
 
-In **Netlify**: Site -> *Domain management* -> **Add a domain** ->
-`diligentfaith.com`. Netlify shows the exact records to use.
+Only these two relate to the website:
 
-In **GoDaddy**: *My Products* -> the domain -> **DNS** -> set:
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `75.2.60.5` |
+| CNAME | `www` | `calm-kleicha-1c8872.netlify.app` |
 
-| Type  | Name  | Value                     |
-|-------|-------|---------------------------|
-| A     | `@`   | `75.2.60.5`               |
-| CNAME | `www` | `<your-site>.netlify.app` |
+**Every other DNS record is for email** (`MX`, all `TXT`, `autodiscover`,
+`msoid`, `lyncdiscover`, `sip`, the `SRV` records, and the DKIM/SPF entries).
+Do not change them.
 
-Remove any old `A`/`CNAME` records that pointed at GoDaddy Website Builder.
+### Previous values, if the old site ever needs to be restored
 
-**Do not change MX records** — those keep company email working.
-
-Changes usually take 15 minutes to 2 hours. Netlify adds HTTPS automatically.
-
-**To undo:** in GoDaddy, reconnect the domain to the Website Builder site
-(Websites + Marketing -> Settings -> Domain). The old site reappears. Keep the
-Website Builder subscription active until the new site is confirmed working.
+| Type | Name | Old value |
+|---|---|---|
+| A | `@` | `13.248.243.5` and `76.223.105.230` (GoDaddy Website Builder) |
+| CNAME | `www` | `diligentfaith.com` |
 
 ---
 
-## Part 7 — What needs a developer
+## Giving someone access to edit the website
 
-Editable without a developer: **all the wording on every page**, team members
-and photos, news items, contact details, the practices list, the affiliations
-list, and the footer.
+1. Go to `https://github.com/workklk8-oss/df-group-website/settings/access`
+2. **Add people** -> their GitHub username -> **Write** access
+3. They accept the emailed invitation
+4. They sign in at pagescms.org and can edit immediately
 
-Needs a web developer: new page types, new sections, layout or design changes,
-colours and fonts, and the partner logo strip images.
+Remove someone from the same screen. Removing their GitHub access removes their
+ability to edit the website.
 
-The project is a standard **Next.js** site — any web developer can work on it.
-Technical setup notes are in `README.md`.
+---
+
+## Notes for a future developer
+
+- Next.js with the App Router, TypeScript, static export (`output: "export"`)
+- Editable content is JSON in `content/`; the editing forms are defined in
+  `.pages.yml`
+- Build settings for Netlify are in `netlify.toml`
+- Local development instructions are in `README.md`
+- The contact form uses Netlify Forms. `public/__forms.html` exists so Netlify
+  can detect the form at deploy time — do not delete it.
