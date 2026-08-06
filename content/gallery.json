@@ -1,76 +1,76 @@
 {
   "photos": [
     {
-      "image": "/gallery/photo-01.png",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-02.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-03.png",
-      "caption": "DF Group at TEDxHongKong — “Connecting Asia, Connecting the World.”"
+      "image": "/gallery/photo-06.jpg",
+      "caption": "INSEAD Asia Campus, Singapore — convening founders, investors and operators"
     },
     {
       "image": "/gallery/photo-04.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-05.png",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-06.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-07.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-08.jpg",
-      "caption": ""
+      "caption": "Ocean Innovators Platform with the Prince Albert II of Monaco Foundation and the Sustainable Finance Initiative, Royal Hong Kong Yacht Club"
     },
     {
       "image": "/gallery/photo-09.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-10.jpg",
-      "caption": ""
+      "caption": "The 3rd Hong Kong World Youth Science Conference, with the Peking University Alumni Association (Hong Kong)"
     },
     {
       "image": "/gallery/photo-11.jpg",
-      "caption": ""
+      "caption": "Hong Kong General Chamber of Commerce delegation"
     },
     {
-      "image": "/gallery/photo-12.jpg",
-      "caption": ""
+      "image": "/gallery/photo-07.jpg",
+      "caption": "Peking University Alumni Association (Hong Kong) — 2026 forum and board inauguration"
+    },
+    {
+      "image": "/gallery/photo-10.jpg",
+      "caption": "Guangdong–Hong Kong–Macao Greater Bay Area Industry & Capital Matching Conference, Hong Kong"
+    },
+    {
+      "image": "/gallery/photo-08.jpg",
+      "caption": "2025 Peking University Global Finance Forum, Singapore"
+    },
+    {
+      "image": "/gallery/photo-02.jpg",
+      "caption": "HKUST (Guangzhou) InnoTech — GBA Venture Capital Forum and China Innovation Going Global Forum"
     },
     {
       "image": "/gallery/photo-13.jpg",
-      "caption": ""
+      "caption": "Beta Gamma Sigma HKUST Chapter — 20th Member Induction Ceremony"
     },
     {
-      "image": "/gallery/photo-14.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-15.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-16.jpg",
-      "caption": ""
-    },
-    {
-      "image": "/gallery/photo-17.jpg",
-      "caption": ""
+      "image": "/gallery/photo-12.jpg",
+      "caption": "Beta Gamma Sigma HKU Chapter Induction Ceremony, HKU Business School"
     },
     {
       "image": "/gallery/photo-18.jpg",
-      "caption": ""
+      "caption": "Sustainable Finance Initiative — Singapore Roadshow"
+    },
+    {
+      "image": "/gallery/photo-05.jpg",
+      "caption": "INSEAD Alumni Entrepreneurship Club, Singapore — awards ceremony"
+    },
+    {
+      "image": "/gallery/photo-15.jpg",
+      "caption": "Investing in a Sustainable Future: Intersecting Capital, Policy and Environment — INSEAD Asia Campus, Earth Week"
+    },
+    {
+      "image": "/gallery/photo-14.jpg",
+      "caption": "CFA Society Hong Kong — speaker panel"
+    },
+    {
+      "image": "/gallery/photo-16.jpg",
+      "caption": "CFA Society Shenzhen Annual Dinner"
+    },
+    {
+      "image": "/gallery/photo-17.jpg",
+      "caption": "Tsinghua Student Entrepreneurship Association — Annual Sustainability Summit"
+    },
+    {
+      "image": "/gallery/photo-03.png",
+      "caption": "DF Group at TEDxHongKong — Connecting Asia, Connecting the World"
+    },
+    {
+      "image": "/gallery/photo-01.png",
+      "caption": "Among the supporting institutions at the Hong Kong wealth management summit"
     }
   ]
 }
