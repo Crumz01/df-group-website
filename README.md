@@ -1,9 +1,13 @@
 # DF Group — website (Next.js)
 
-The DF Group (Diligent Faith) site, rebuilt in **Next.js** with a refined,
-animated version of the original "Research House" design. It exports to a plain
-folder of static files you can upload to GoDaddy exactly like the old single
-HTML file.
+> **Just need to change the words or pictures on the site?**
+> Read **[WEBSITE-GUIDE.md](WEBSITE-GUIDE.md)** instead — no coding, nothing to
+> install. This file is for developers working on the code.
+
+The DF Group (Diligent Faith) site, built in **Next.js** with a refined,
+animated version of the original "Research House" design. It is a static export
+hosted on Netlify at **https://diligentfaith.com**, rebuilding automatically
+whenever content changes.
 
 > Your original single-file site is still here as **`index.html`** (untouched).
 > Keep it as a backup until you're happy with the new build.
